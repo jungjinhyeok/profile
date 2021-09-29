@@ -1,0 +1,588 @@
+@charset "utf-8";
+
+/* 헤더 */
+#wrap > header {
+	position: relative;
+	width: 100%;
+	height: 1000px;
+	background-image: url(./../images/bgi.jpg);
+	background-position: center center;
+	background-size: cover;
+}
+
+#wrap > header:after {
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(30, 100, 110, 0.3);
+	content: "";
+}
+
+#wrap > header > h1 {
+	position: absolute;
+	left: calc(50% - 190px);
+	top: 40%;
+	width: max-content;
+	color: #fff;
+	font-size: 50px;
+	line-height: 80px;
+	text-align: center;
+	z-index: 10;
+}
+
+#wrap > header > h1 > span {
+	font-weight: 800;
+}
+
+/* 네비게이션 */
+#wrap > header > nav {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 60px;
+	background-color: #fff;
+	box-shadow: 0 2px 4px #aaa;
+	z-index: 10;
+}
+
+#wrap > header > nav > .gnb {
+	display: flex;
+	justify-content: space-between;
+	width: 550px;
+	margin: 0 auto;
+}
+
+#wrap > header > nav > .gnb > li > a {
+	display: block;
+	height: 60px;
+	font-weight: 800;
+	font-size: 20px;
+	line-height: 60px;
+	text-align: center;
+}
+
+/* 네비게이션 활성화 */
+#wrap > header > nav > .gnb > li:hover > a,
+#wrap > header > nav > .gnb > li.on > a {
+	color: #7bc5ae;
+	text-decoration: underline;
+}
+
+/* section 공통 css */
+/* #wrap > section {
+	position: relative;
+} */
+
+#wrap > section > article > .cont_box {
+	width: 1140px;
+	margin: 0 auto;
+	padding: 90px 0 50px;
+}
+
+/* 첫번째 article */
+#wrap > section > .about_me {
+	height: 1300px;
+	font-size: 30px;
+	background-color: #b6d4e0;
+}
+
+/* 나의 소개 */
+#wrap > section > .about_me > h3 {
+	padding-top: 100px;
+	font-weight: 800;
+	font-size: 30px;
+	text-align: center;
+}
+
+#wrap > section > .about_me > .cont_box > .introduce {
+	display: flex;
+	justify-content: space-between;
+}
+
+#wrap > section > .about_me > .cont_box > .introduce > .frame {
+	position: relative;
+	overflow: hidden;
+	width: 350px;
+	height: 306px;
+	border-radius: 100px;
+}
+
+#wrap > section > .about_me > .cont_box > .introduce > .frame:after {
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.3);
+	content: "";
+}
+
+#wrap > section > .about_me > .cont_box > .introduce > .frame > p {
+	position: absolute;
+	left: 180px;
+	top: 40px;
+}
+
+#wrap > section > .about_me > .cont_box > .introduce > .frame > img {
+	display: block;
+	width: 100%;
+}
+
+#wrap > section > .about_me > .cont_box > .introduce > .text > p {
+	padding-top: 30px;
+	font-size: 25px;
+	line-height: 30px;
+}
+
+#wrap > section > .about_me > .cont_box > .introduce > .text > p > strong {
+	font-weight: 600;
+}
+
+/* 성격소개 */
+#wrap > section > .about_me > .cont_box > .i_am > h4,
+#wrap > section > .about_me > .cont_box > .i_am > .char > div > .text > h5 {
+	font-weight: 800;
+	font-size: 50px;
+	font-family: "Gaegu";
+}
+
+#wrap > section > .about_me > .cont_box > .i_am > h4 {
+	margin-top: 100px;
+	text-align: center;
+}
+
+#wrap > section > .about_me > .cont_box > .i_am > .char {
+	display: none;
+}
+
+#wrap > section > .about_me > .cont_box > .i_am > .char > div {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	margin-top: 50px;
+}
+
+/* 성격 설명 이미지 */
+#wrap > section > .about_me > .cont_box > .i_am > .char > div > .frame {
+	display: block;
+	overflow: hidden;
+	position: relative;
+	width: 380px;
+	border-radius: 10px;
+	background-size: cover;
+}
+
+#wrap > section > .about_me > .cont_box > .i_am > .char > div > .frame:after {
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.3);
+	content: "";
+}
+
+#wrap > section > .about_me > .cont_box > .i_am > .char > div > .frame > img {
+	display: block;
+	height: 230px;
+	transition: all 0.5s;
+}
+#wrap > section > .about_me > .cont_box > .i_am > .char > div > .frame:hover {
+	box-shadow: 3px 3px 5px #000;
+}
+
+#wrap > section > .about_me > .cont_box > .i_am > .char > div > .frame:hover > img {
+	transform: scale(1.3);
+}
+
+/* 성격 설명 텍스트 정리 */
+#wrap > section > .about_me > .cont_box > .i_am > .char > div > .text > p {
+	margin-top: 50px;
+	font-family: "Nanum Brush Script";
+}
+
+/* 경력소개 */
+#wrap > section > .life {
+	background-color: #1d6a96;
+}
+
+#wrap > section > .life > .cont_box > .work > h4 {
+	color: #fff;
+	font-weight: 800;
+	font-size: 30px;
+	text-align: center;
+}
+
+#wrap > section > .life > .cont_box > .work > .career {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	position: relative;
+	width: 920px;
+	height: 230px;
+	margin: 0 auto;
+	padding-top: 50px;
+}
+
+#wrap > section > .life > .cont_box > .work > .career > li {
+	display: none;
+	position: absolute;
+	color: #fff;
+}
+/* 경력 요소간의 간격 */
+#wrap > section > .life > .cont_box > .work > .career > li:nth-of-type(1) {
+	left: 170px;
+	top: 50px;
+}
+
+#wrap > section > .life > .cont_box > .work > .career > li:nth-of-type(2) {
+	left: 450px;
+	top: 50px;
+}
+
+#wrap > section > .life > .cont_box > .work > .career > li:nth-of-type(3) {
+	right: 20px;
+	top: 50px;
+}
+
+#wrap > section > .life > .cont_box > .work > .career > li:nth-of-type(4) {
+	right: 0;
+	bottom: 0;
+}
+#wrap > section > .life > .cont_box > .work > .career > li:nth-of-type(5) {
+	right: 240px;
+	bottom: 0;
+}
+#wrap > section > .life > .cont_box > .work > .career > li:nth-of-type(6) {
+	left: 340px;
+	bottom: 0;
+}
+#wrap > section > .life > .cont_box > .work > .career > li:nth-of-type(7) {
+	left: 90px;
+	bottom: 0;
+}
+
+/* 근무기간과 회사명 부각 */
+#wrap > section > .life > .cont_box > .work > .career > li > p:first-child {
+	margin-bottom: 5px;
+	font-weight: 800;
+}
+
+/* 경력소개 디자인적 요소 */
+#wrap > section > .life > .cont_box > .work > .career:after {
+	display: block;
+	position: absolute;
+	left: calc(50% - 350px);
+	top: 50%;
+	width: 800px;
+	height: 50px;
+	border-top: 5px solid #cc8a56;
+	border-right: 5px solid #cc8a56;
+	border-radius: 3px;
+	content: "";
+}
+
+#wrap > section > .life > .cont_box > .work > .career:before {
+	display: block;
+	position: absolute;
+	left: calc(50% - 450px);
+	top: calc(50% + 50px);
+	width: 900px;
+	height: 50px;
+	border-top: 5px solid #cc8a56;
+	border-radius: 3px;
+	content: "";
+}
+
+#wrap > section > .life > .cont_box > .work > .career > li:before {
+	display: block;
+	position: absolute;
+	left: -15px;
+	top: 5px;
+	width: 10px;
+	height: 10px;
+	border-radius: 5px;
+	background-color: #cc8a56;
+	content: "";
+}
+#wrap > section > .life > .cont_box > .work > .career > li:nth-of-type(1):after,
+#wrap > section > .life > .cont_box > .work > .career > li:nth-of-type(2):after,
+#wrap > section > .life > .cont_box > .work > .career > li:nth-of-type(3):after {
+	display: block;
+	position: absolute;
+	left: -11px;
+	top: 15px;
+	width: 0;
+	height: 72px;
+	border: 1px dashed #000;
+	content: "";
+}
+
+#wrap > section > .life > .cont_box > .work > .career > li:nth-of-type(4):after,
+#wrap > section > .life > .cont_box > .work > .career > li:nth-of-type(5):after,
+#wrap > section > .life > .cont_box > .work > .career > li:nth-of-type(6):after,
+#wrap > section > .life > .cont_box > .work > .career > li:nth-of-type(7):after {
+	display: block;
+	position: absolute;
+	left: -12px;
+	top: -15px;
+	width: 0;
+	height: 18px;
+	border: 1px dashed #000;
+	content: "";
+}
+
+/* 스킬 */
+#wrap > section > .life > .cont_box > .skill {
+	margin-top: 100px;
+}
+
+#wrap > section > .life > .cont_box > .skill > h4 {
+	color: #fff;
+	font-weight: 800;
+	font-size: 30px;
+	text-align: center;
+}
+
+#wrap > section > .life > .cont_box > .skill > .skill-box {
+	display: flex;
+	justify-content: space-between;
+	width: 760px;
+	margin: 50px auto 0;
+}
+
+#wrap > section > .life > .cont_box > .skill > .skill-box > img {
+	display: block;
+	width: 80px;
+	height: 100px;
+}
+
+/* SWOT */
+#wrap > section > .swot > .cont_box {
+	width: 997px;
+}
+#wrap > section > .swot > .cont_box > img {
+	display: block;
+	height: 580px;
+}
+
+/* PORTFOLIO */
+#wrap > section > .portfolio {
+	height: 900px;
+	background-color: #d1dddb;
+}
+
+#wrap > section > .portfolio > h3 {
+	padding-top: 150px;
+	font-weight: 800;
+	font-size: 30px;
+	text-align: center;
+}
+
+/* portfolio list */
+#wrap > section > .portfolio > .cont_box > .list {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 100px;
+}
+
+#wrap > section > .portfolio > .cont_box > .list > li {
+	margin-left: 20px;
+	padding: 0 10px;
+	background-color: #a5a5a5;
+	border-radius: 20px;
+}
+#wrap > section > .portfolio > .cont_box > .list > li:first-child {
+	margin-left: 0;
+}
+
+#wrap > section > .portfolio > .cont_box > .list > li.on,
+#wrap > section > .portfolio > .cont_box > .list > li:hover {
+	background-color: #4472c4;
+}
+
+#wrap > section > .portfolio > .cont_box > .list > li > a {
+	display: block;
+	height: 30px;
+	color: #fff;
+	font-weight: 600;
+	line-height: 30px;
+}
+
+/* portfolio 화면 */
+#wrap > section > .portfolio > .cont_box > .view-container {
+	position: relative;
+	overflow: hidden;
+	height: 430px;
+}
+
+#wrap > section > .portfolio > .cont_box > .view-container > .view {
+	display: none;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 1140px;
+	height: 430px;
+}
+
+#wrap > section > .portfolio > .cont_box > .view-container > .port1 {
+	display: flex;
+}
+
+#wrap > section > .portfolio > .cont_box > .view-container > .view > .view-text {
+	position: absolute;
+	left: 50px;
+	top: 0;
+	height: 430px;
+	padding: 30px 0;
+}
+
+#wrap > section > .portfolio > .cont_box > .view-container > .view > .view-text > h4 {
+	font-size: 20px;
+	font-weight: 600;
+	text-align: center;
+}
+
+#wrap > section > .portfolio > .cont_box > .view-container > .view > .view-text > p {
+	margin-top: 50px;
+}
+
+#wrap > section > .portfolio > .cont_box > .view-container > .view > .view-text > a {
+	display: block;
+	width: 150px;
+	height: 40px;
+	margin-top: 100px;
+	color: #4472c4;
+	text-align: center;
+	line-height: 40px;
+	border: 1px solid #4472c4;
+	border-radius: 10px;
+}
+
+#wrap > section > .portfolio > .cont_box > .view-container > .view > .monitor {
+	position: absolute;
+	right: 50px;
+	top: 0;
+	height: 430px;
+}
+
+#wrap > section > .portfolio > .cont_box > .view-container > .view > .monitor > img {
+	display: block;
+	width: 100%;
+}
+
+/* contact영역 */
+#wrap > section > .contact > .cont_box > p {
+	padding: 30px;
+	font-size: 40px;
+	line-height: 60px;
+	text-align: center;
+}
+
+#wrap > section > .contact > .cont_box > p > strong {
+	font-weight: 600;
+}
+
+/* 연락처 텍스트 */
+#wrap > section > .contact > .cont_box > .contact-box {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 30px;
+	font-size: 30px;
+}
+
+#wrap > section > .contact > .cont_box > .contact-box > .phone-box {
+	display: flex;
+	margin-left: 30px;
+}
+
+#wrap > section > .contact > .cont_box > .contact-box > .phone-box > div {
+	display: flex;
+}
+
+#wrap > section > .contact > .cont_box > .contact-box > .phone-box > div > span {
+	display: block;
+	width: 50px;
+	height: 50px;
+}
+
+#wrap > section > .contact > .cont_box > .contact-box > .phone-box > div > span > img {
+	display: block;
+	height: 50px;
+	margin: auto;
+}
+
+#wrap > section > .contact > .cont_box > .contact-box > .phone-box > .phone > span {
+	background-color: #fff;
+	border: 1px solid #000;
+}
+
+#wrap > section > .contact > .cont_box > .contact-box > .phone-box > .mail > span > img {
+	border: 1px solid #000;
+}
+
+#wrap > section > .contact > .cont_box > .contact-box > .phone-box > .mail {
+	margin-left: 25px;
+}
+
+#wrap > section > .contact > .cont_box > .contact-box > .phone-box > div > p {
+	height: 50px;
+	margin-left: 20px;
+	line-height: 50px;
+}
+
+/* top 버튼 */
+#wrap > section > .top {
+	display: none;
+	position: fixed;
+	right: 30px;
+	bottom: 30px;
+	width: 40px;
+	height: 40px;
+	text-indent: -9999px;
+	background-color: #023459;
+}
+
+#wrap > section > .top:after {
+	display: block;
+	position: absolute;
+	left: 5px;
+	bottom: 14px;
+	width: 0;
+	border-width: 15px;
+	border-style: solid;
+	border-color: transparent transparent #fff transparent;
+	content: "";
+}
+
+#wrap > section > .top:before {
+	display: block;
+	position: absolute;
+	left: 5px;
+	bottom: 10px;
+	width: 0;
+	border-width: 15px;
+	border-style: solid;
+	border-color: transparent transparent #023459 transparent;
+	z-index: 10;
+	content: "";
+}
+
+/* footer */
+#wrap > footer {
+	margin-top: 50px;
+	padding: 30px 0;
+	background-color: #999;
+}
+
+#wrap > footer > p {
+	line-height: 25px;
+	text-align: center;
+}

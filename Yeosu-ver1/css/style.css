@@ -1,0 +1,994 @@
+@charset "utf-8";
+
+#wrap {
+	position: relative;
+	width: 1200px;
+	margin: 0 auto;
+}
+
+header {
+	position: relative;
+}
+
+header > h1 {
+	position: absolute;
+	left: 341px;
+	top: 155px;
+	z-index: 100;
+	width: 540px;
+	font-size: 60px;
+	font-family: "Nanum Brush Script";
+	text-align: center;
+}
+
+header > h1 > span {
+	font-family: "Black Han Sans";
+}
+
+/* 헤더백그라운드 이미지*/
+header > .banner_container {
+	position: absolute;
+	left: 0;
+	top: 60px;
+	width: 1200px;
+	overflow: hidden;
+}
+
+header > .banner_container > .banner {
+	display: flex;
+	z-index: -100;
+	width: 4800px;
+}
+
+/* 각 article과 배너 백그라운드 설정 */
+section > article,
+header > .banner_container > .banner > li {
+	width: 1200px;
+	height: 960px;
+	background-size: cover;
+	background-position: center center;
+}
+
+/* 배너 백그라운드 이미지 */
+header > .banner_container > .banner > li:nth-of-type(1) {
+	background-image: url(./../images/header1.JPG);
+}
+
+header > .banner_container > .banner > li:nth-of-type(2) {
+	background-image: url(./../images/header2.JPG);
+}
+
+header > .banner_container > .banner > li:nth-of-type(3) {
+	background-image: url(./../images/header4.JPG);
+}
+
+header > .banner_container > .banner > li:nth-of-type(4) {
+	background-image: url(./../images/header5.JPG);
+}
+
+/* gnb */
+header > nav {
+	position: fixed;
+	left: calc(50% - 600px);
+	top: 0;
+	z-index: 1000;
+	width: 1200px;
+	height: 60px;
+	background-color: #00d8ff;
+}
+
+header > nav > .gnb {
+	display: flex;
+	justify-content: space-evenly;
+	width: 950px;
+	height: 60px;
+	margin: 0 auto;
+	background-color: #00d8ff;
+}
+
+header > nav > .gnb > li > a {
+	display: block;
+	height: 30px;
+	margin: 15px 0;
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 30px;
+	text-align: center;
+}
+
+header > nav > .gnb > li.on > a,
+header > nav > .gnb > li:hover > a {
+	color: #fff;
+	border-bottom: 3px solid #fff;
+}
+
+/* section */
+section {
+	position: absolute;
+	left: 0;
+	top: 940px;
+}
+
+section > h2,
+section > article > h3 {
+	position: absolute;
+	left: -9999px;
+}
+
+/* 각 article 백그라운드이미지 */
+section > article.odongdo {
+	position: absolute;
+	left: 0;
+	top: 0;
+	background-image: url(./../images/odongdo_bgi.jpg);
+}
+
+section > article.mural-village {
+	position: absolute;
+	left: 0;
+	top: 900px;
+	background-image: url(./../images/mural_village-bgi.jpg);
+}
+
+section > article.dolsan-park {
+	position: absolute;
+	left: 0;
+	top: 1800px;
+	background-image: url(./../images/dolsan-park_bgi.jpg);
+}
+
+section > article.hamel-lighthouse {
+	position: absolute;
+	left: 0;
+	top: 2700px;
+	background-image: url(./../images/hamel-lighthouse_bgi.jpg);
+	/* background-image: url(./../images/하멜등대_백그라운드.jpg); */
+}
+
+section > article.romantic-cart-bars {
+	position: absolute;
+	left: 0;
+	top: 3600px;
+	background-image: url(./../images/romantic_cart_bars-bgi.jpg);
+}
+
+/* article 공통 CSS */
+section > article > div {
+	position: absolute;
+	left: 150px;
+	top: 150px;
+	width: 870px;
+	height: 550px;
+}
+section > article > div > ul > li {
+	display: none;
+}
+
+/* 설명 및 위치 컨텐츠 */
+section > article > div > ul > li:first-child {
+	position: relative;
+	display: block;
+}
+
+section > article > div > ul > li:first-child > p {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	padding: 5px;
+	color: #fff;
+	font-size: 15px;
+	line-height: 25px;
+	text-align: justify;
+	background-color: rgba(0, 0, 0, 0.3);
+}
+
+section > article > div > ul > li:first-child > .map {
+	width: 870px;
+	height: 550px;
+	background-size: cover;
+	background-position: center center;
+}
+
+section > .odongdo > .odongdo_container > .odongdo_cont > li:first-child > .map {
+	background-image: url(./../images/odongdo_map.jpg);
+}
+
+section > .mural-village > .mural-village_container > .mural-village_cont > li:first-child > .map {
+	background-image: url(./../images/mural-village_map.jpg);
+}
+
+section > .dolsan-park > .dolsan-park_container > .dolsan-park_cont > li:first-child > .map {
+	background-image: url(./../images/dolsan-park_map.jpg);
+}
+
+section
+	> .hamel-lighthouse
+	> .hamel-lighthouse_container
+	> .hamel-lighthouse_cont
+	> li:first-child
+	> .map {
+	background-image: url(./../images/hamel-lighthouse_map.jpg);
+}
+
+section
+	> .romantic-cart-bars
+	> .romantic-cart-bars_container
+	> .romantic-cart-bars_cont
+	> li:first-child
+	> .map {
+	background-image: url(./../images/romantic-cart-bars_map.jpg);
+}
+
+/* 관련사진 컨텐츠 중 슬라이드이미지 공통 CSS */
+section > article > div > ul > li:nth-of-type(2) > .slides-frame {
+	position: relative;
+	overflow: hidden;
+	width: 870px;
+	height: 450px;
+	background-color: #fff;
+}
+
+section > article > div > ul > li:nth-of-type(2) > .slides-frame > .slides {
+	display: flex;
+	width: calc(870px * 4);
+	height: 450px;
+}
+
+section > article > div > ul > li:nth-of-type(2) > .slides-frame > .slides > li {
+	width: 870px;
+	height: 100%;
+	background-size: cover;
+	background-position: center center;
+}
+
+/* 오동도 관련사진 슬라이드컨텐츠 */
+section
+	> .odongdo
+	> .odongdo_container
+	> .odongdo_cont
+	> li:nth-of-type(2)
+	> .slides-frame
+	> .slides
+	> li:nth-of-type(1) {
+	background-image: url(./../images/odongdo_road.jpg);
+}
+
+section
+	> .odongdo
+	> .odongdo_container
+	> .odongdo_cont
+	> li:nth-of-type(2)
+	> .slides-frame
+	> .slides
+	> li:nth-of-type(2) {
+	background-image: url(./../images/odongdo_img2.jpg);
+}
+
+section
+	> .odongdo
+	> .odongdo_container
+	> .odongdo_cont
+	> li:nth-of-type(2)
+	> .slides-frame
+	> .slides
+	> li:nth-of-type(3) {
+	background-image: url(./../images/odongdo_img1.jpg);
+}
+
+section
+	> .odongdo
+	> .odongdo_container
+	> .odongdo_cont
+	> li:nth-of-type(2)
+	> .slides-frame
+	> .slides
+	> li:nth-of-type(4) {
+	background-image: url(./../images/odongdo_train.jpg);
+}
+
+/* 벽화거리 관련사진 슬라이드컨텐츠 */
+section
+	> .mural-village
+	> .mural-village_container
+	> .mural-village_cont
+	> li:nth-of-type(2)
+	> .slides-frame
+	> .slides
+	> li:nth-of-type(1) {
+	background-image: url(./../images/mural_village-angel.jpg);
+}
+
+section
+	> .mural-village
+	> .mural-village_container
+	> .mural-village_cont
+	> li:nth-of-type(2)
+	> .slides-frame
+	> .slides
+	> li:nth-of-type(2) {
+	background-image: url(./../images/mural_village-pegasos.jpg);
+}
+
+section
+	> .mural-village
+	> .mural-village_container
+	> .mural-village_cont
+	> li:nth-of-type(2)
+	> .slides-frame
+	> .slides
+	> li:nth-of-type(3) {
+	background-image: url(./../images/mural_village-sea.jpg);
+}
+
+section
+	> .mural-village
+	> .mural-village_container
+	> .mural-village_cont
+	> li:nth-of-type(2)
+	> .slides-frame
+	> .slides
+	> li:nth-of-type(4) {
+	background-image: url(./../images/mural_village-geobukseon.jpg);
+}
+
+/* 돌산공원 관련사진 슬라이드컨텐츠 */
+section
+	> .dolsan-park
+	> .dolsan-park_container
+	> .dolsan-park_cont
+	> li:nth-of-type(2)
+	> .slides-frame
+	> .slides
+	> li:nth-of-type(1) {
+	background-image: url(./../images/dolsan_park-night1.jpg);
+}
+
+section
+	> .dolsan-park
+	> .dolsan-park_container
+	> .dolsan-park_cont
+	> li:nth-of-type(2)
+	> .slides-frame
+	> .slides
+	> li:nth-of-type(2) {
+	background-image: url(./../images/dolsan_park-night2.jpg);
+}
+
+section
+	> .dolsan-park
+	> .dolsan-park_container
+	> .dolsan-park_cont
+	> li:nth-of-type(2)
+	> .slides-frame
+	> .slides
+	> li:nth-of-type(3) {
+	background-image: url(./../images/dolsan_park-night3.jpg);
+}
+
+section
+	> .dolsan-park
+	> .dolsan-park_container
+	> .dolsan-park_cont
+	> li:nth-of-type(2)
+	> .slides-frame
+	> .slides
+	> li:nth-of-type(4) {
+	background-image: url(./../images/dolsan_park-night4.jpg);
+}
+
+/* 하멜등대 관련사진 슬라이드컨텐츠 */
+section
+	> .hamel-lighthouse
+	> .hamel-lighthouse_container
+	> .hamel-lighthouse_cont
+	> li:nth-of-type(2)
+	> .slides-frame
+	> .slides
+	> li:nth-of-type(1) {
+	background-image: url(./../images/hamel_lighthouse-img1.jpg);
+}
+
+section
+	> .hamel-lighthouse
+	> .hamel-lighthouse_container
+	> .hamel-lighthouse_cont
+	> li:nth-of-type(2)
+	> .slides-frame
+	> .slides
+	> li:nth-of-type(2) {
+	background-image: url(./../images/hamel_lighthouse-sunset.jpg);
+}
+
+section
+	> .hamel-lighthouse
+	> .hamel-lighthouse_container
+	> .hamel-lighthouse_cont
+	> li:nth-of-type(2)
+	> .slides-frame
+	> .slides
+	> li:nth-of-type(3) {
+	background-image: url(./../images/hamel_lighthouse-img2.jpg);
+}
+
+section
+	> .hamel-lighthouse
+	> .hamel-lighthouse_container
+	> .hamel-lighthouse_cont
+	> li:nth-of-type(2)
+	> .slides-frame
+	> .slides
+	> li:nth-of-type(4) {
+	background-image: url(./../images/hamel_lighthouse-night2.jpg);
+}
+
+/* 낭만포차거리 관련사진 슬라이드컨텐츠 */
+section
+	> .romantic-cart-bars
+	> .romantic-cart-bars_container
+	> .romantic-cart-bars_cont
+	> li:nth-of-type(2)
+	> .slides-frame
+	> .slides
+	> li:nth-of-type(1) {
+	background-image: url(./../images/romantic_cart_bars-photo.jpg);
+}
+
+section
+	> .romantic-cart-bars
+	> .romantic-cart-bars_container
+	> .romantic-cart-bars_cont
+	> li:nth-of-type(2)
+	> .slides-frame
+	> .slides
+	> li:nth-of-type(2) {
+	background-image: url(./../images/romantic_cart_bars-busking.jpg);
+}
+
+section
+	> .romantic-cart-bars
+	> .romantic-cart-bars_container
+	> .romantic-cart-bars_cont
+	> li:nth-of-type(2)
+	> .slides-frame
+	> .slides
+	> li:nth-of-type(3) {
+	background-image: url(./../images/romantic_cart_bars-food1.jpg);
+}
+
+section
+	> .romantic-cart-bars
+	> .romantic-cart-bars_container
+	> .romantic-cart-bars_cont
+	> li:nth-of-type(2)
+	> .slides-frame
+	> .slides
+	> li:nth-of-type(4) {
+	background-image: url(./../images/romantic_cart_bars-food4.jpg);
+}
+
+/* 이전, 다음 버튼 CSS */
+section > article > div > ul > li:nth-of-type(2) > .slides-frame > .prev {
+	position: absolute;
+	left: 10px;
+	top: 175px;
+	width: 80px;
+	height: 100px;
+	background-image: url(./../images/btn_navigation.png);
+	background-position: -5px -225px;
+}
+
+section > article > div > ul > li:nth-of-type(2) > .slides-frame > .prev:hover {
+	background-position: -5px -335px;
+}
+
+section > article > div > ul > li:nth-of-type(2) > .slides-frame > .next {
+	position: absolute;
+	right: 10px;
+	top: 175px;
+	width: 80px;
+	height: 100px;
+	background-image: url(./../images/btn_navigation.png);
+	background-position: -5px -5px;
+}
+
+section > article > div > ul > li:nth-of-type(2) > .slides-frame > .next:hover {
+	background-position: -5px -115px;
+}
+
+/* 관련사진 컨텐트 중 썸네일 공통 CSS */
+section > article > div > ul > li:nth-of-type(2) > .thmbs {
+	display: flex;
+	justify-content: center;
+	width: 870px;
+	height: 100px;
+	background-color: rgba(255, 255, 255, 0.3);
+}
+
+section > article > div > ul > li:nth-of-type(2) > .thmbs > li > a {
+	display: block;
+	width: 100px;
+	height: 80px;
+	margin: 10px 10px;
+	background-size: cover;
+	background-position: center center;
+}
+
+section > article > div > ul > li:nth-of-type(2) > .thmbs > li:hover > a,
+section > article > div > ul > li:nth-of-type(2) > .thmbs > li.on_img > a {
+	border: 3px solid #fff;
+	box-sizing: border-box;
+}
+
+/* 오동도 관련사진 썸네일컨텐츠 */
+section
+	> .odongdo
+	> .odongdo_container
+	> .odongdo_cont
+	> li:nth-of-type(2)
+	> .thmbs
+	> li:nth-of-type(1)
+	> a {
+	background-image: url(./../images/odongdo_road.jpg);
+}
+
+section
+	> .odongdo
+	> .odongdo_container
+	> .odongdo_cont
+	> li:nth-of-type(2)
+	> .thmbs
+	> li:nth-of-type(2)
+	> a {
+	background-image: url(./../images/odongdo_img2.jpg);
+}
+
+section
+	> .odongdo
+	> .odongdo_container
+	> .odongdo_cont
+	> li:nth-of-type(2)
+	> .thmbs
+	> li:nth-of-type(3)
+	> a {
+	background-image: url(./../images/odongdo_img1.jpg);
+}
+
+section
+	> .odongdo
+	> .odongdo_container
+	> .odongdo_cont
+	> li:nth-of-type(2)
+	> .thmbs
+	> li:nth-of-type(4)
+	> a {
+	background-image: url(./../images/odongdo_train.jpg);
+}
+
+/* 벽화거리 관련사진 썸네일컨텐츠 */
+section
+	> .mural-village
+	> .mural-village_container
+	> .mural-village_cont
+	> li:nth-of-type(2)
+	> .thmbs
+	> li:nth-of-type(1)
+	> a {
+	background-image: url(./../images/mural_village-angel.jpg);
+}
+
+section
+	> .mural-village
+	> .mural-village_container
+	> .mural-village_cont
+	> li:nth-of-type(2)
+	> .thmbs
+	> li:nth-of-type(2)
+	> a {
+	background-image: url(./../images/mural_village-pegasos.jpg);
+}
+
+section
+	> .mural-village
+	> .mural-village_container
+	> .mural-village_cont
+	> li:nth-of-type(2)
+	> .thmbs
+	> li:nth-of-type(3)
+	> a {
+	background-image: url(./../images/mural_village-sea.jpg);
+}
+
+section
+	> .mural-village
+	> .mural-village_container
+	> .mural-village_cont
+	> li:nth-of-type(2)
+	> .thmbs
+	> li:nth-of-type(4)
+	> a {
+	background-image: url(./../images/mural_village-geobukseon.jpg);
+}
+
+/* 돌산공원 관련사진 썸네일컨텐츠 */
+section
+	> .dolsan-park
+	> .dolsan-park_container
+	> .dolsan-park_cont
+	> li:nth-of-type(2)
+	> .thmbs
+	> li:nth-of-type(1)
+	> a {
+	background-image: url(./../images/dolsan_park-night1.jpg);
+}
+
+section
+	> .dolsan-park
+	> .dolsan-park_container
+	> .dolsan-park_cont
+	> li:nth-of-type(2)
+	> .thmbs
+	> li:nth-of-type(2)
+	> a {
+	background-image: url(./../images/dolsan_park-night2.jpg);
+}
+
+section
+	> .dolsan-park
+	> .dolsan-park_container
+	> .dolsan-park_cont
+	> li:nth-of-type(2)
+	> .thmbs
+	> li:nth-of-type(3)
+	> a {
+	background-image: url(./../images/dolsan_park-night3.jpg);
+}
+
+section
+	> .dolsan-park
+	> .dolsan-park_container
+	> .dolsan-park_cont
+	> li:nth-of-type(2)
+	> .thmbs
+	> li:nth-of-type(4)
+	> a {
+	background-image: url(./../images/dolsan_park-night4.jpg);
+}
+
+/* 하멜등대 관련사진 썸네일컨텐츠 */
+section
+	> .hamel-lighthouse
+	> .hamel-lighthouse_container
+	> .hamel-lighthouse_cont
+	> li:nth-of-type(2)
+	> .thmbs
+	> li:nth-of-type(1)
+	> a {
+	background-image: url(./../images/hamel_lighthouse-img1.jpg);
+}
+
+section
+	> .hamel-lighthouse
+	> .hamel-lighthouse_container
+	> .hamel-lighthouse_cont
+	> li:nth-of-type(2)
+	> .thmbs
+	> li:nth-of-type(2)
+	> a {
+	background-image: url(./../images/hamel_lighthouse-sunset.jpg);
+}
+
+section
+	> .hamel-lighthouse
+	> .hamel-lighthouse_container
+	> .hamel-lighthouse_cont
+	> li:nth-of-type(2)
+	> .thmbs
+	> li:nth-of-type(3)
+	> a {
+	background-image: url(./../images/hamel_lighthouse-img2.jpg);
+}
+
+section
+	> .hamel-lighthouse
+	> .hamel-lighthouse_container
+	> .hamel-lighthouse_cont
+	> li:nth-of-type(2)
+	> .thmbs
+	> li:nth-of-type(4)
+	> a {
+	background-image: url(./../images/hamel_lighthouse-night2.jpg);
+}
+
+/* 낭만포차거리 관련사진 썸네일컨텐츠 */
+section
+	> .romantic-cart-bars
+	> .romantic-cart-bars_container
+	> .romantic-cart-bars_cont
+	> li:nth-of-type(2)
+	> .thmbs
+	> li:nth-of-type(1)
+	> a {
+	background-image: url(./../images/romantic_cart_bars-photo.jpg);
+}
+
+section
+	> .romantic-cart-bars
+	> .romantic-cart-bars_container
+	> .romantic-cart-bars_cont
+	> li:nth-of-type(2)
+	> .thmbs
+	> li:nth-of-type(2)
+	> a {
+	background-image: url(./../images/romantic_cart_bars-busking.jpg);
+}
+
+section
+	> .romantic-cart-bars
+	> .romantic-cart-bars_container
+	> .romantic-cart-bars_cont
+	> li:nth-of-type(2)
+	> .thmbs
+	> li:nth-of-type(3)
+	> a {
+	background-image: url(./../images/romantic_cart_bars-food1.jpg);
+}
+
+section
+	> .romantic-cart-bars
+	> .romantic-cart-bars_container
+	> .romantic-cart-bars_cont
+	> li:nth-of-type(2)
+	> .thmbs
+	> li:nth-of-type(4)
+	> a {
+	background-image: url(./../images/romantic_cart_bars-food4.jpg);
+}
+
+/* 관련영상 컨텐츠 */
+section > article > div > ul > li:last-child > .video_container {
+	overflow: hidden;
+	width: 870px;
+	height: 450px;
+}
+
+section > article > div > ul > li:last-child > .video_container > .video {
+	display: flex;
+	width: calc(870px * 3);
+	height: 450px;
+}
+
+section > article > div > ul > li:last-child > .video_container > .video > li {
+	width: 870px;
+	height: 450px;
+}
+
+/* 관련영상 썸네일 */
+section > article > div > ul > li:last-child > .video-list {
+	display: flex;
+	justify-content: center;
+	width: 870px;
+	height: 100px;
+	background-color: rgba(255, 255, 255, 0.3);
+}
+
+section > article > div > ul > li:last-child > .video-list > li > a {
+	display: block;
+	width: 100px;
+	height: 80px;
+	margin: 10px 10px;
+	background-size: cover;
+	background-position: center center;
+}
+
+/* 오동도 관련영상 썸네일 */
+section
+	> .odongdo
+	> .odongdo_container
+	> .odongdo_cont
+	> li:last-child
+	> .video-list
+	> li:nth-of-type(1)
+	> a {
+	background-image: url(./../images/odongdo_thmb1.jpg);
+}
+
+section
+	> .odongdo
+	> .odongdo_container
+	> .odongdo_cont
+	> li:last-child
+	> .video-list
+	> li:nth-of-type(2)
+	> a {
+	background-image: url(./../images/odongdo_thmb2.jpg);
+}
+
+section
+	> .odongdo
+	> .odongdo_container
+	> .odongdo_cont
+	> li:last-child
+	> .video-list
+	> li:nth-of-type(3)
+	> a {
+	background-image: url(./../images/odongdo_thmb3.jpg);
+}
+
+/* 천사벽화거리 관련영상 썸네일 */
+section
+	> .mural-village
+	> .mural-village_container
+	> .mural-village_cont
+	> li:last-child
+	> .video-list
+	> li:nth-of-type(1)
+	> a {
+	background-image: url(./../images/mural-village_thmb1.jpg);
+}
+
+section
+	> .mural-village
+	> .mural-village_container
+	> .mural-village_cont
+	> li:last-child
+	> .video-list
+	> li:nth-of-type(2)
+	> a {
+	background-image: url(./../images/mural-village_thmb2.jpg);
+}
+
+section
+	> .mural-village
+	> .mural-village_container
+	> .mural-village_cont
+	> li:last-child
+	> .video-list
+	> li:nth-of-type(3)
+	> a {
+	background-image: url(./../images/mural-village_thmb3.jpg);
+}
+
+/* 돌산공원 관련영상 썸네일 */
+section
+	> .dolsan-park
+	> .dolsan-park_container
+	> .dolsan-park_cont
+	> li:last-child
+	> .video-list
+	> li:nth-of-type(1)
+	> a {
+	background-image: url(./../images/dolsan-park_thmb1.jpg);
+}
+
+section
+	> .dolsan-park
+	> .dolsan-park_container
+	> .dolsan-park_cont
+	> li:last-child
+	> .video-list
+	> li:nth-of-type(2)
+	> a {
+	background-image: url(./../images/dolsan-park_thmb2.jpg);
+}
+
+section
+	> .dolsan-park
+	> .dolsan-park_container
+	> .dolsan-park_cont
+	> li:last-child
+	> .video-list
+	> li:nth-of-type(3)
+	> a {
+	background-image: url(./../images/dolsan-park_thmb3.jpg);
+}
+
+/* 하멜등대 관련영상 썸네일 */
+section
+	> .hamel-lighthouse
+	> .hamel-lighthouse_container
+	> .hamel-lighthouse_cont
+	> li:last-child
+	> .video-list
+	> li:nth-of-type(1)
+	> a {
+	background-image: url(./../images/hamel-lighthouse_thmb1.jpg);
+}
+
+section
+	> .hamel-lighthouse
+	> .hamel-lighthouse_container
+	> .hamel-lighthouse_cont
+	> li:last-child
+	> .video-list
+	> li:nth-of-type(2)
+	> a {
+	background-image: url(./../images/hamel-lighthouse_thmb2.jpg);
+}
+
+section
+	> .hamel-lighthouse
+	> .hamel-lighthouse_container
+	> .hamel-lighthouse_cont
+	> li:last-child
+	> .video-list
+	> li:nth-of-type(3)
+	> a {
+	background-image: url(./../images/hamel-lighthouse_thmb3.jpg);
+}
+
+/* 낭만포차거리 관련영상 썸네일 */
+section
+	> .romantic-cart-bars
+	> .romantic-cart-bars_container
+	> .romantic-cart-bars_cont
+	> li:last-child
+	> .video-list
+	> li:nth-of-type(1)
+	> a {
+	background-image: url(./../images/romantic-cart-bars_thmb1.jpg);
+}
+
+section
+	> .romantic-cart-bars
+	> .romantic-cart-bars_container
+	> .romantic-cart-bars_cont
+	> li:last-child
+	> .video-list
+	> li:nth-of-type(2)
+	> a {
+	background-image: url(./../images/romantic-cart-bars_thmb2.jpg);
+}
+
+section
+	> .romantic-cart-bars
+	> .romantic-cart-bars_container
+	> .romantic-cart-bars_cont
+	> li:last-child
+	> .video-list
+	> li:nth-of-type(3)
+	> a {
+	background-image: url(./../images/romantic-cart-bars_thmb3.jpg);
+}
+
+/* lnb */
+section > article > nav {
+	position: absolute;
+	right: 10px;
+	top: 335px;
+	width: 170px;
+	height: 180px;
+	background-color: rgba(255, 255, 255, 0.5);
+}
+
+section > article > nav > .lnb > li > a {
+	display: block;
+	width: 100px;
+	height: 30px;
+	margin: 15px auto;
+	font-size: 16px;
+	line-height: 30px;
+	font-family: "Gaegu";
+	text-align: center;
+}
+
+section > article > nav > .lnb > li:nth-of-type(2) > a {
+	margin-top: 25px;
+	margin-bottom: 25px;
+}
+
+section > article > nav > .lnb > li:hover > a,
+section > article > nav > .lnb > li.select > a {
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+footer > address {
+	position: absolute;
+	left: 0;
+	top: 5500px;
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	background-color: #999;
+}
