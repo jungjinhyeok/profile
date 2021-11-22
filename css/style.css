@@ -505,27 +505,7 @@
 
 #wrap > section > .contact > .cont_box > .contact-box > .phone-box > div {
 	display: flex;
-}
-
-#wrap > section > .contact > .cont_box > .contact-box > .phone-box > div > span {
-	display: block;
-	width: 50px;
-	height: 50px;
-}
-
-#wrap > section > .contact > .cont_box > .contact-box > .phone-box > div > span > img {
-	display: block;
-	height: 50px;
-	margin: auto;
-}
-
-#wrap > section > .contact > .cont_box > .contact-box > .phone-box > .phone > span {
-	background-color: #fff;
-	border: 1px solid #000;
-}
-
-#wrap > section > .contact > .cont_box > .contact-box > .phone-box > .mail > span > img {
-	border: 1px solid #000;
+	align-items: center;
 }
 
 #wrap > section > .contact > .cont_box > .contact-box > .phone-box > .mail {
@@ -534,7 +514,7 @@
 
 #wrap > section > .contact > .cont_box > .contact-box > .phone-box > div > p {
 	height: 50px;
-	margin-left: 20px;
+	margin-left: 10px;
 	line-height: 50px;
 }
 
